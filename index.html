@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>Strona trenera Starożytnej Świątyni</title>
+<meta name="viewport" id="vp" content="width=1280">
+<script>
+/* telefon: układ mobilny w szerokości ekranu; tablet i komputer: układ komputerowy */
+try { if (Math.min(screen.width, screen.height) < 600) document.getElementById("vp").setAttribute("content", "width=device-width, initial-scale=1"); } catch (e) {}
+/* urządzenie bez myszy i touchpada (telefon, tablet): zamiast przycisku aplikacji – informacja */
+try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.classList.add("dotyk"); } catch (e) {}
+</script>
+<meta name="robots" content="noindex, nofollow">
+<style>
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:400;font-display:swap;src:url(fonty/alegreya-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:400;font-display:swap;src:url(fonty/alegreya-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:500;font-display:swap;src:url(fonty/alegreya-500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:500;font-display:swap;src:url(fonty/alegreya-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:700;font-display:swap;src:url(fonty/alegreya-700-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Alegreya';font-style:normal;font-weight:700;font-display:swap;src:url(fonty/alegreya-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonty/alegreya-sans-400-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonty/alegreya-sans-400-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonty/alegreya-sans-500-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonty/alegreya-sans-500-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonty/alegreya-sans-700-latin-ext.woff2) format('woff2');unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
+@font-face{font-family:'Alegreya Sans';font-style:normal;font-weight:700;font-display:swap;src:url(fonty/alegreya-sans-700-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+
+
+  :root{
+    --tusz:#3a2a17;          /* tekst główny – ciemna sepia */
+    --sepia:#7a5a32;
+    --zloto:#c8962e;
+    --doswiadczenie:#9a1f2a;
+    --refleksja:#27548a;
+    --teoria:#c85a0c;
+    --pragmatyka:#7c4a24;
+    --wszystkie:#2f5a37;
+    --kolumna:1200px;
+  }
+  *{box-sizing:border-box}
+  html{background:#f2d9a6}
+  body{
+    margin:0; min-width:1240px; min-height:100vh;
+    font-family:"Alegreya Sans",sans-serif; font-size:19px; line-height:1.55; color:var(--tusz);
+    /* warstwy tła: pnącza u góry, krajobraz u dołu, pod spodem pergamin */
+    background:
+      url(img/tlo-gora.png) center top / 1920px auto no-repeat,
+      url(img/tlo-dol.png) center bottom / 1920px auto no-repeat,
+      url(img/tlo-pergamin.jpg) center top / 1920px auto repeat-y;
+    background-color:#f2d9a6;
+    padding-bottom:360px;      /* miejsce na krajobraz – stopka wchodzi w jego przejrzystą górną część */
+  }
+  .kolumna{width:var(--kolumna); margin:0 auto; position:relative}
+
+  /* SEKCJA 1 – aplikacja */
+  .hero{position:relative; height:675px; background:url(img/hero.jpg) center/cover no-repeat;
+    box-shadow:0 10px 30px rgba(40,25,5,.35)}
+  .hero .blok{position:absolute; left:100px; top:96px; width:530px}
+  .hero h1{font-size:40px; line-height:1.1; color:#f7e3b0; margin-bottom:12px;
+    text-shadow:0 2px 6px rgba(0,0,0,.95), 0 0 22px rgba(0,0,0,.6)}
+  .hero .wstep{margin:0 0 26px; font-size:18px; line-height:1.45; color:#f3e6c8;
+    text-shadow:0 1px 4px rgba(0,0,0,.95), 0 0 18px rgba(0,0,0,.6)}
+  .hero .oczko{color:#f3c55a; text-shadow:0 1px 3px rgba(0,0,0,.9); margin-bottom:6px}
+  .hero h2{font-size:32px; line-height:1.1; color:#f7e3b0; margin-bottom:14px;
+    text-shadow:0 2px 6px rgba(0,0,0,.95), 0 0 22px rgba(0,0,0,.6)}
+  .hero .zdanie{margin:0 0 22px; font-size:19px; line-height:1.42; font-weight:500; color:#fbf1dc;
+    text-shadow:0 1px 4px rgba(0,0,0,.95), 0 0 18px rgba(0,0,0,.6)}
+  .hero .start{position:relative; display:block; width:306px; height:60px;
+    background:url(img/przycisk-aplikacja.png) center/contain no-repeat;
+    transition:transform .15s ease, filter .15s ease; filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
+  .hero .start:hover{transform:translateY(-2px); filter:drop-shadow(0 6px 14px rgba(0,0,0,.6)) brightness(1.08)}
+  .hero .start span{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+  .hero .uwaga{margin:14px 0 0 4px; font-size:17px; line-height:1.45; font-weight:700; color:#f6ead2;
+    text-shadow:0 1px 3px rgba(0,0,0,.9)}
+
+  /* SEKCJA 2 – wejście do katalogu */
+  .wejscie{position:relative; height:569px; background:url(img/katalog-tlo.png) center/cover no-repeat}
+  .wejscie .tekst{position:absolute; left:90px; top:58px; width:620px}
+  .oczko{font-family:"Alegreya Sans",sans-serif; font-weight:500; font-size:15px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--sepia); margin:0 0 6px}
+  h1,h2,h3{font-family:"Alegreya",serif; font-weight:700; color:#2b1f10; margin:0}
+  .wejscie h1{font-size:40px; line-height:1.15; margin-bottom:18px}
+  .wejscie p{margin:0 0 12px; font-size:19px}
+  /* klikalne sześciokąty narysowane w grafice */
+  .hex{position:absolute; width:170px; height:192px; cursor:pointer; border:0; padding:0; background:transparent;
+    clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+  .hex:hover,.hex.aktywny{background:radial-gradient(circle,rgba(255,240,190,.45),rgba(255,240,190,0) 72%)}
+  .hex[data-etap=doswiadczenie]{left:837px; top:26px}
+  .hex[data-etap=refleksja]{left:927px; top:184px}
+  .hex[data-etap=pragmatyka]{left:747px; top:184px}
+  .hex[data-etap=teoria]{left:837px; top:339px}
+
+  /* SEKCJA 3 – zakładki i karty */
+  .zakladki{display:flex; justify-content:space-between; margin:14px 0 34px}
+  .zakladki button{width:237px; height:88px; border:0; padding:0; cursor:pointer; background:transparent;
+    background-size:100% 100%; transition:transform .12s ease}
+  .zakladki button:hover{transform:translateY(-2px)}
+  .zakladki button span{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
+
+  .siatka{display:grid; grid-template-columns:repeat(3,1fr); gap:28px}
+  .karta{position:relative; display:flex; flex-direction:column; background:rgba(253,244,224,.82);
+    border:1px solid rgba(150,110,55,.35); border-top:5px solid var(--kolor); border-radius:6px;
+    box-shadow:0 6px 18px rgba(80,50,10,.14); overflow:hidden; text-decoration:none; color:inherit;
+    transition:transform .15s ease, box-shadow .15s ease}
+  .karta:hover{transform:translateY(-3px); box-shadow:0 10px 26px rgba(80,50,10,.22)}
+  .karta[hidden]{display:none}
+  .ilustracja{aspect-ratio:8/5; background:#e9d3a8 center/cover no-repeat; position:relative}
+  .ilustracja.brak{background:repeating-linear-gradient(45deg,#ead6ae 0 12px,#e3cb9c 12px 24px);
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    font-size:14px; color:var(--sepia); border-bottom:1px dashed rgba(122,90,50,.5)}
+  .ilustracja.brak b{display:block; font-size:15px; color:var(--tusz)}
+  .tresc{padding:18px 22px 20px; display:flex; flex-direction:column; flex:1}
+  .etap{display:flex; align-items:center; gap:10px; margin-bottom:10px;
+    font-weight:700; font-size:14px; letter-spacing:.12em; text-transform:uppercase; color:var(--kolor)}
+  .znak{width:auto; height:36px; flex:none}
+  .karta h3{font-size:21px; line-height:1.2; margin-bottom:8px}
+  .karta p{margin:0 0 14px; font-size:17px; line-height:1.45; color:#5a4428}
+  .czytaj{margin-top:auto; font-weight:700; color:var(--kolor)}
+
+  .rosnie{text-align:center; margin:56px auto 0; max-width:900px; font-family:"Alegreya Sans",sans-serif; font-weight:500;
+    font-size:18px; line-height:1.4; color:#4a3318}
+  .rosnie::before{content:""; display:block; height:2px; margin:0 auto 20px; width:860px;
+    background:linear-gradient(90deg,transparent,rgba(122,90,50,.75) 18%,rgba(122,90,50,.75) 82%,transparent)}
+  .stopka{text-align:center; margin-top:4px; font-weight:700; font-size:15px; letter-spacing:.06em; color:#3a2a17}
+  .stopka span, .stopka a{white-space:nowrap}
+  .stopka a{color:inherit; text-decoration-thickness:1px; text-underline-offset:3px}
+
+
+
+  .nowe{margin-left:auto; padding:1px 9px; border:1.5px solid var(--kolor); border-radius:4px;
+    font-size:13px; letter-spacing:.12em; color:var(--kolor); background:rgba(255,250,236,.7)}
+
+  .strony{display:flex; justify-content:center; gap:10px; margin:34px 0 0}
+  .strony:empty{display:none}
+  .strony button{min-width:44px; height:44px; padding:0 10px; border-radius:22px; cursor:pointer;
+    font:700 19px "Alegreya Sans",sans-serif; color:var(--kolor); background:rgba(253,244,224,.85);
+    border:1.5px solid rgba(150,110,55,.45); box-shadow:0 3px 8px rgba(80,50,10,.12);
+    transition:transform .12s ease, background .12s ease}
+  .strony button:hover:not(:disabled):not(.aktywna){transform:translateY(-2px); background:#fff6e2}
+  .strony button.aktywna{background:var(--kolor); border-color:var(--kolor); color:#fff8e8; cursor:default}
+  .strony button:disabled{opacity:.35; cursor:default; box-shadow:none}
+  body.widok-art .strony{display:none}
+  body.widok-art{padding-bottom:430px}
+  body.widok-art .stopka{margin-top:40px}
+
+  /* WIDOK ARTYKUŁU */
+  #art{--tekst:820px; padding-top:44px}
+  #art .uklad{width:var(--tekst); margin:0 auto}
+  #art.pasek .uklad{width:var(--kolumna); display:grid; grid-template-columns:800px 352px; column-gap:48px; align-items:start}
+  #art .gora{margin-bottom:20px}
+  #art .powrot{display:inline-block; line-height:0; transition:transform .15s ease, filter .15s ease; filter:drop-shadow(0 3px 6px rgba(40,25,5,.35))}
+  #art .powrot:hover{transform:translateY(-2px); filter:drop-shadow(0 6px 10px rgba(40,25,5,.45)) brightness(1.06)}
+  #art .powrot img{display:block; width:235px; height:52px}
+  #art .obraz{display:block; width:100%; aspect-ratio:12/5; object-fit:cover; border-radius:4px; box-shadow:0 6px 18px rgba(80,50,10,.18)}
+  #art .etap{margin:26px 0 10px}
+  #art h1{font-size:38px; line-height:1.15; margin-bottom:18px}
+  #art .lead{font-size:21px; line-height:1.45; margin:0 0 16px; color:#2b1f10}
+  #art .art-tresc{line-height:1.45}
+  #art .art-tresc p{margin:0 0 12px}
+  #art .art-tresc h2{font-size:26px; line-height:1.2; margin:26px 0 10px}
+  #art .art-tresc ul{margin:0 0 14px; padding-left:24px}
+  #art .art-tresc li{margin-bottom:4px}
+  #art .art-tresc li::marker{color:var(--kolor)}
+  #art .art-tresc strong{font-weight:500; color:#2b1f10}
+  #art .art-tresc a{color:var(--kolor); font-weight:500; text-decoration-thickness:1px; text-underline-offset:3px}
+  #art .art-tresc ol.pytania{margin:0 0 16px; padding-left:28px}
+  #art .art-tresc ol.pytania li{margin-bottom:6px; padding-left:4px}
+  #art .art-tresc ol.pytania li::marker{color:var(--kolor); font-weight:700}
+  #art .pobierz{margin:6px 0 18px}
+  #art .pobierz a{display:inline-block; line-height:0; transition:transform .15s ease, filter .15s ease; filter:drop-shadow(0 3px 6px rgba(40,25,5,.35))}
+  #art .pobierz a:hover{transform:translateY(-2px); filter:drop-shadow(0 6px 10px rgba(40,25,5,.45)) brightness(1.06)}
+  #art .pobierz img{display:block; width:235px; height:auto}
+  #art .pobierz-tekst{display:inline-block; line-height:1; padding:14px 22px; border-radius:8px; background:#2f5a37; color:#f3d98a; font-weight:700; letter-spacing:.08em}
+  #art .literatura{margin-top:28px; padding-top:16px; border-top:1px solid rgba(122,90,50,.35)}
+  #art .literatura h2{font-size:21px; margin:0 0 8px}
+  #art .literatura ol{margin:0; padding-left:24px; font-size:16px; line-height:1.45; color:#5a4428}
+  #art .literatura li{margin-bottom:4px}
+  #art .koniec{margin-top:30px; padding-top:22px; border-top:1px solid rgba(122,90,50,.35)}
+  #art .boczny{display:none}
+  #art.pasek .boczny{display:block}
+  #art .mini{display:block; margin-bottom:22px; background:rgba(253,244,224,.82); border:1px solid rgba(150,110,55,.35); border-top:4px solid var(--kolor); border-radius:6px; overflow:hidden; text-decoration:none; color:inherit; box-shadow:0 4px 12px rgba(80,50,10,.12); transition:transform .15s ease}
+  #art .mini:hover{transform:translateY(-2px)}
+  #art .mini .il{aspect-ratio:8/5; background:center/cover no-repeat}
+  #art .mini .t{padding:12px 16px 14px}
+  #art .mini .etap{font-size:12px; margin:0 0 6px}
+  #art .mini .znak{height:28px}
+  #art .mini h4{font-family:"Alegreya",serif; font-weight:700; color:#2b1f10; font-size:18px; line-height:1.2; margin:0 0 6px}
+  #art .mini p{margin:0; font-size:15px; line-height:1.4; color:#5a4428}
+  body.widok-art .hero, body.widok-art .wejscie, body.widok-art .zakladki, body.widok-art .siatka, body.widok-art .rosnie{display:none}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--zloto); outline-offset:3px}
+
+
+  /* ===== INFORMACJA ZAMIAST PRZYCISKU APLIKACJI (telefon, tablet) ===== */
+  .hero-obraz, .wejscie-obraz, .tylko-komputer, #art .czytaj-takze{display:none}
+  .tylko-komputer{padding:14px 18px; border:1.5px solid #c8962e; border-radius:10px;
+    background:rgba(20,16,6,.72); color:#f6ead2; font-size:17px; line-height:1.45; max-width:470px}
+  .tylko-komputer b{display:block; font-size:19px; color:#f3c55a; margin-bottom:4px}
+  .dotyk .hero .start, .dotyk .hero .uwaga{display:none}
+  .dotyk .tylko-komputer{display:block}
+
+  /* ===== WERSJA MOBILNA (telefon) ===== */
+  @media (max-width: 760px){
+    body{min-width:0; font-size:17px;
+      background:
+        url(img/tlo-gora.png) center top / 900px auto no-repeat,
+        url(img/tlo-dol.png) center bottom / 1000px auto no-repeat,
+        url(img/tlo-pergamin.jpg) center top / 1000px auto repeat-y;
+      background-color:#f2d9a6; padding-bottom:250px}
+    .kolumna{width:auto; margin:0}
+
+    /* panel 1 – obraz z napisem */
+    .hero{height:auto; background:none; box-shadow:none}
+    .hero-obraz{display:block; aspect-ratio:1170/1000; background:url(img/mobile-panel-swiatynia.jpg) center / cover no-repeat}
+    /* panel 2 – tekst na tle dżungli */
+    .hero .blok{position:static; width:auto; padding:34px 20px 36px;
+      background:#0d1408 url(img/mobile-panel-tekst.jpg) center / cover no-repeat}
+    .hero h1{font-size:30px}
+    .hero .wstep{font-size:17px}
+    .hero h2{font-size:25px}
+    .hero .zdanie{font-size:17px; margin-bottom:20px}
+    .hero .start, .hero .uwaga{display:none}
+    .tylko-komputer{display:block; font-size:16px; max-width:none}
+    .tylko-komputer b{font-size:18px}
+
+    /* wejście do katalogu – sześciokąty, tekst pod nimi */
+    .wejscie{height:auto; background:none}
+    .wejscie-obraz{display:block; aspect-ratio:1170/1320; background:url(img/mobile-szesciokaty.jpg) center / cover no-repeat}
+    .wejscie .tekst{position:static; width:auto; padding:22px 20px 8px}
+    .wejscie h1{font-size:28px}
+    .wejscie p{font-size:17px}
+    .hex{display:none}
+
+    /* wybór etapu – pięć kwadratowych przycisków w jednym rzędzie */
+    .zakladki{gap:6px; margin:14px 0 22px; padding:0 14px}
+    .zakladki button{position:relative; flex:1 1 0; min-width:0; width:auto; height:auto; aspect-ratio:1;
+      background-size:contain !important; background-repeat:no-repeat; background-position:center}
+    .zakladki button:hover{transform:none}
+    .zakladki button[data-etap=wszystkie]{background-image:url(img/przycisk-wszystkie.png) !important}
+    .zakladki button[data-etap=doswiadczenie]{background-image:url(img/przycisk-doswiadczenie.png) !important}
+    .zakladki button[data-etap=refleksja]{background-image:url(img/przycisk-refleksja.png) !important}
+    .zakladki button[data-etap=teoria]{background-image:url(img/przycisk-teoria.png) !important}
+    .zakladki button[data-etap=pragmatyka]{background-image:url(img/przycisk-pragmatyka.png) !important}
+    .zakladki button[data-etap=wszystkie][aria-pressed=true]{background-image:url(img/przycisk-wszystkie-aktywny.png) !important}
+    .zakladki button[data-etap=doswiadczenie][aria-pressed=true]{background-image:url(img/przycisk-doswiadczenie-aktywny.png) !important}
+    .zakladki button[data-etap=refleksja][aria-pressed=true]{background-image:url(img/przycisk-refleksja-aktywny.png) !important}
+    .zakladki button[data-etap=teoria][aria-pressed=true]{background-image:url(img/przycisk-teoria-aktywny.png) !important}
+    .zakladki button[data-etap=pragmatyka][aria-pressed=true]{background-image:url(img/przycisk-pragmatyka-aktywny.png) !important}
+
+    /* karty – jedna kolumna */
+    .siatka{grid-template-columns:1fr; gap:20px; padding:0 16px}
+    .karta h3{font-size:20px}
+    .karta p{font-size:16px}
+    .strony{margin-top:26px}
+
+    /* stopka */
+    .rosnie{margin:40px 16px 0; font-size:17px}
+    .rosnie::before{width:80%}
+    .stopka{padding:0 16px}
+    body.widok-art{padding-bottom:280px}
+
+    /* artykuł – jedna kolumna, propozycje pod tekstem */
+    #art{padding-top:18px}
+    #art.pasek .uklad, #art .uklad{display:block; width:auto; padding:0 16px}
+    #art .powrot img{width:188px; height:auto}
+    #art h1{font-size:28px}
+    #art .lead{font-size:18px}
+    #art .art-tresc h2{font-size:22px}
+    #art .boczny .gora{display:none}
+    #art .czytaj-takze{display:block; font-size:24px; margin:34px 0 14px; padding-top:22px; border-top:1px solid rgba(122,90,50,.35)}
+    #art .obraz{border-radius:3px}
+  }
+</style>
+</head>
+<body>
+
+
+<div class="kolumna">
+
+  <!-- SEKCJA 1 – APLIKACJA -->
+  <header class="hero">
+    <div class="hero-obraz" role="img" aria-label="Starożytna Świątynia"></div>
+    <div class="blok">
+      <div class="oczko">Strona trenera</div>
+      <h1>Wyprawa zaczyna się tutaj</h1>
+      <p class="wstep">Ta strona jest zapleczem trenerów prowadzących Starożytną Świątynię. Aplikacja wprowadza uczestników w fabułę i odmierza czas gry. Katalog pomysłów podsuwa sposoby, by z rozgrywki wydobyć jak najwięcej: warianty przebiegu, wątki do omówienia i pytania, które przenoszą wnioski do codziennej pracy zespołu.</p>
+      <h2>Otwórz wrota świątyni</h2>
+      <p class="zdanie">Zanim zespół sięgnie po kafle, przenosi się do dżungli, pod mury świątyni. Im głębiej gracze wejdą w opowieść, tym bardziej autentycznie działają przy planszy, a do omówienia trafia bogatszy materiał.</p>
+      <a class="start" href="aplikacja/index.html" target="_blank" rel="noopener" title="Uruchom aplikację w nowym oknie"><span>Uruchom aplikację</span></a>
+      <p class="uwaga">Aplikacja działa poprawnie wyłącznie na komputerze i jest przeznaczona do wyświetlania przez projektor multimedialny.</p>
+      <div class="tylko-komputer"><b>Aplikacja działa na komputerze</b>Uruchomisz ją na komputerze podłączonym do projektora. Po wejściu na tę stronę z komputera w tym miejscu pojawi się przycisk „Uruchom aplikację”.</div>
+    </div>
+  </header>
+
+  <!-- SEKCJA 2 – WEJŚCIE DO KATALOGU -->
+  <section class="wejscie" id="katalog">
+    <div class="wejscie-obraz" role="img" aria-label="Symbole czterech etapów cyklu Kolba"></div>
+    <div class="tekst">
+      <div class="oczko">Pomysły dla trenera</div>
+      <h1>Katalog pomysłów do pracy z grą</h1>
+      <p>Zasady i przebieg gry opisują drukowana instrukcja i film. Tutaj zbieramy to, co pozwala wydobyć z gry więcej: konteksty teoretyczne, warianty przebiegu, wątki do omówienia i sposoby przenoszenia wniosków do pracy zespołu.</p>
+      <p>Teksty układają się według cyklu Kolba: doświadczenie, refleksja, teoria, pragmatyka. W cykl można wejść w dowolnym miejscu – na przykład od teorii, którą gra następnie zilustruje.</p>
+    </div>
+    <button class="hex" data-etap="doswiadczenie" title="Doświadczenie" aria-label="Pokaż: Doświadczenie"></button>
+    <button class="hex" data-etap="refleksja" title="Refleksja" aria-label="Pokaż: Refleksja"></button>
+    <button class="hex" data-etap="teoria" title="Teoria" aria-label="Pokaż: Teoria"></button>
+    <button class="hex" data-etap="pragmatyka" title="Pragmatyka" aria-label="Pokaż: Pragmatyka"></button>
+  </section>
+
+  <!-- SEKCJA 3 – ZAKŁADKI I KARTY -->
+  <nav class="zakladki" id="zakladki" aria-label="Pokaż artykuły z obszaru"></nav>
+  <main class="siatka" id="siatka"></main>
+  <nav class="strony" id="strony" aria-label="Strony katalogu"></nav>
+
+  <div id="art" hidden></div>
+  <p class="rosnie">Katalog stale się rozrasta – nowe pomysły dochodzą do każdego z czterech obszarów.</p>
+  <div class="stopka"><span>© aleGRA Twórczy Rozwój</span> · <span>Wszelkie prawa zastrzeżone</span> · <a href="https://www.alegra.pl">www.alegra.pl</a></div>
+</div>
+
+
+
+<script src="artykuly.js"></script>
+<script>
+/* ETAPY – kolejność zakładek */
+const ETAPY = [
+  {id:"wszystkie",     nazwa:"Wszystkie",     kolor:"var(--wszystkie)"},
+  {id:"doswiadczenie", nazwa:"Doświadczenie", kolor:"var(--doswiadczenie)"},
+  {id:"refleksja",     nazwa:"Refleksja",     kolor:"var(--refleksja)"},
+  {id:"teoria",        nazwa:"Teoria",        kolor:"var(--teoria)"},
+  {id:"pragmatyka",    nazwa:"Pragmatyka",    kolor:"var(--pragmatyka)"}
+];
+const NAZWY = {doswiadczenie:"Doświadczenie", refleksja:"Refleksja", teoria:"Teoria", pragmatyka:"Pragmatyka"};
+const ARTYKULY = window.ARTYKULY || [];
+const NA_STRONE = 6;
+
+/* PAMIĘĆ WIZYTY – kolejność kart, wybrany etap i strona trwają do zamknięcia karty przeglądarki */
+function wczytaj(k, d){ try { const v = sessionStorage.getItem(k); return v ? JSON.parse(v) : d; } catch(e){ return d; } }
+function zapisz(k, v){ try { sessionStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+function tasuj(t){ for (let i = t.length - 1; i > 0; i--){ const j = Math.floor(Math.random()*(i+1)); [t[i], t[j]] = [t[j], t[i]]; } return t; }
+
+/* JEDNOSTKI – pojedynczy artykuł albo cała seria (części zawsze razem, w kolejności) */
+const JEDNOSTKI = new Map();
+ARTYKULY.forEach(a => {
+  const k = a.seria ? "seria:" + a.seria : a.id;
+  if (!JEDNOSTKI.has(k)) JEDNOSTKI.set(k, []);
+  JEDNOSTKI.get(k).push(a);
+});
+JEDNOSTKI.forEach(l => l.sort((x, y) => (x.czesc || 0) - (y.czesc || 0)));
+
+/* KOLEJNOŚĆ – losowa przy każdej wizycie; nowe artykuły na początku */
+let kolejnosc = wczytaj("kolejnosc", null);
+const klucze = [...JEDNOSTKI.keys()];
+if (!Array.isArray(kolejnosc) || kolejnosc.length !== klucze.length || !klucze.every(k => kolejnosc.includes(k))) {
+  const jestNowa = k => JEDNOSTKI.get(k).some(a => a.nowy);
+  kolejnosc = [...tasuj(klucze.filter(jestNowa)), ...tasuj(klucze.filter(k => !jestNowa(k)))];
+  zapisz("kolejnosc", kolejnosc);
+}
+
+/* PODZIAŁ NA STRONY – po 6 kart; części serii nie rozdzielają się między strony */
+function podzial(etap){
+  const kolejka = kolejnosc.map(k => JEDNOSTKI.get(k).filter(a => etap === "wszystkie" || a.etap === etap)).filter(l => l.length);
+  const strony = []; let biezaca = [];
+  while (kolejka.length){
+    const i = kolejka.findIndex(u => u.length <= NA_STRONE - biezaca.length);
+    if (i === -1){ strony.push(biezaca); biezaca = []; continue; }
+    biezaca.push(...kolejka.splice(i, 1)[0]);
+    if (biezaca.length === NA_STRONE){ strony.push(biezaca); biezaca = []; }
+  }
+  if (biezaca.length) strony.push(biezaca);
+  return strony;
+}
+
+/* KARTY */
+const zakladki = document.getElementById("zakladki");
+const siatka = document.getElementById("siatka");
+const nawigacja = document.getElementById("strony");
+const KARTY = {};
+ARTYKULY.forEach(a => {
+  const e = ETAPY.find(x => x.id === a.etap);
+  const k = document.createElement("a");
+  k.className = "karta"; k.href = `#${a.id}`;
+  k.style.setProperty("--kolor", e.kolor);
+  k.innerHTML = `
+    <div class="ilustracja" style="background-image:url(${a.karta})"></div>
+    <div class="tresc">
+      <div class="etap"><img class="znak" src="img/ikona-${a.etap}.png" alt="" onerror="this.remove()">${e.nazwa}${a.nowy ? '<span class="nowe">Nowe</span>' : ""}</div>
+      <h3>${a.tytul}</h3>
+      <p>${a.lead}</p>
+      <span class="czytaj">Czytaj →</span>
+    </div>`;
+  KARTY[a.id] = k;
+});
+
+ETAPY.forEach(e => {
+  const b = document.createElement("button");
+  b.dataset.etap = e.id;
+  b.innerHTML = `<span>${e.nazwa}</span>`;
+  b.title = e.nazwa;
+  b.addEventListener("click", () => wybierz(e.id, 1));
+  zakladki.appendChild(b);
+});
+
+let widok = wczytaj("widok", {etap:"wszystkie", strona:1});
+if (!ETAPY.some(e => e.id === widok.etap)) widok = {etap:"wszystkie", strona:1};
+
+function wybierz(etap, strona, przewin){
+  const strony = podzial(etap);
+  strona = Math.min(Math.max(1, strona || 1), Math.max(1, strony.length));
+  widok = {etap, strona}; zapisz("widok", widok);
+
+  zakladki.querySelectorAll("button").forEach(b => {
+    const akt = b.dataset.etap === etap;
+    b.style.backgroundImage = `url(img/zakladka-${b.dataset.etap}${akt ? "-aktywna" : ""}.png)`;
+    b.setAttribute("aria-pressed", akt);
+  });
+  document.querySelectorAll(".hex").forEach(h => h.classList.toggle("aktywny", h.dataset.etap === etap));
+
+  siatka.replaceChildren(...(strony[strona - 1] || []).map(a => KARTY[a.id]));
+
+  const kolor = ETAPY.find(e => e.id === etap).kolor;
+  nawigacja.style.setProperty("--kolor", kolor);
+  nawigacja.innerHTML = "";
+  if (strony.length > 1){
+    const przycisk = (tekst, cel, opis, aktywny, wylaczony) => {
+      const b = document.createElement("button");
+      b.textContent = tekst; b.title = opis; b.setAttribute("aria-label", opis);
+      if (aktywny){ b.className = "aktywna"; b.setAttribute("aria-current", "page"); }
+      if (wylaczony) b.disabled = true;
+      else b.addEventListener("click", () => wybierz(etap, cel, true));
+      nawigacja.appendChild(b);
+    };
+    przycisk("‹", strona - 1, "Poprzednia strona", false, strona === 1);
+    strony.forEach((_, i) => przycisk(String(i + 1), i + 1, `Strona ${i + 1}`, i + 1 === strona, false));
+    przycisk("›", strona + 1, "Następna strona", false, strona === strony.length);
+  }
+  if (przewin) zakladki.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+document.querySelectorAll(".hex").forEach(h => h.addEventListener("click", () => {
+  wybierz(widok.etap === h.dataset.etap ? "wszystkie" : h.dataset.etap, 1, true);
+}));
+
+ETAPY.forEach(e => { new Image().src = matchMedia("(max-width: 760px)").matches ? `img/przycisk-${e.id}-aktywny.png` : `img/zakladka-${e.id}-aktywna.png`; });
+wybierz(widok.etap, widok.strona);
+
+
+/* WIDOK ARTYKUŁU – adres #id */
+const art = document.getElementById("art");
+const przyciskKatalog = `<a class="powrot" href="#katalog" title="Wróć do katalogu pomysłów"><img src="img/przycisk-katalog.png" alt="Katalog pomysłów"></a>`;
+const etykieta = e => `<div class="etap" style="--kolor:var(--${e})"><img class="znak" src="img/ikona-${e}.png" alt="" onerror="this.remove()">${NAZWY[e]}</div>`;
+
+/* Pasek boczny: druga część serii na pierwszym miejscu, reszta losowo, z możliwie różnych etapów */
+function propozycje(a){
+  const wynik = a.seria ? ARTYKULY.filter(x => x.seria === a.seria && x.id !== a.id) : [];
+  const etapy = new Set([a.etap, ...wynik.map(x => x.etap)]);
+  const pula = tasuj(ARTYKULY.filter(x => x.id !== a.id && !wynik.includes(x)));
+  while (wynik.length < 3 && pula.length){
+    let i = pula.findIndex(x => !etapy.has(x.etap));
+    if (i === -1) i = 0;
+    const x = pula.splice(i, 1)[0];
+    wynik.push(x); etapy.add(x.etap);
+  }
+  return wynik.slice(0, 3);
+}
+
+function przyciskPdf(a){
+  if (!a.pdf || !a.pdfGotowy) return "";
+  return `<p class="pobierz"><a href="${a.pdf}" download title="Pobierz plik PDF"><img src="img/przycisk-pdf.png" alt="Pobierz PDF" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'pobierz-tekst',textContent:'Pobierz PDF'}))"></a></p>`;
+}
+
+function pokaz(){
+  const h = decodeURIComponent(location.hash.slice(1));
+  const a = ARTYKULY.find(x => x.id === h);
+  if (!a){
+    document.body.classList.remove("widok-art"); art.hidden = true;
+    if (location.hash === "#katalog") zakladki.scrollIntoView({block:"start"});
+    return;
+  }
+  const boczne = propozycje(a).map(x => `
+    <a class="mini" href="#${x.id}" style="--kolor:var(--${x.etap})">
+      <div class="il" style="background-image:url(${x.karta})"></div>
+      <div class="t">${etykieta(x.etap)}<h4>${x.tytul}</h4><p>${x.lead}</p></div>
+    </a>`).join("");
+  const literatura = a.literatura && a.literatura.length
+    ? `<section class="literatura"><h2>Literatura cytowana</h2><ol>${a.literatura.map(p => `<li>${p}</li>`).join("")}</ol></section>` : "";
+  art.className = "pasek";
+  art.style.setProperty("--kolor", `var(--${a.etap})`);
+  art.innerHTML = `
+    <div class="uklad">
+      <article>
+        <div class="gora">${przyciskKatalog}</div>
+        <img class="obraz" src="${a.ilustracja}" alt="">
+        ${etykieta(a.etap)}
+        <h1>${a.tytul}</h1>
+        <p class="lead">${a.lead}</p>
+        <div class="art-tresc">${a.tresc.replace("<!--PDF-->", przyciskPdf(a))}</div>
+        ${literatura}
+        <div class="koniec">${przyciskKatalog}</div>
+      </article>
+      <aside class="boczny"><div class="gora" style="visibility:hidden">${przyciskKatalog}</div><h2 class="czytaj-takze">Czytaj także</h2>${boczne}</aside>
+    </div>`;
+  art.hidden = false; document.body.classList.add("widok-art");
+  window.scrollTo(0, 0);
+}
+window.addEventListener("hashchange", pokaz);
+pokaz();
+</script>
+
+</body></html>
