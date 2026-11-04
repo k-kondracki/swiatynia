@@ -44,16 +44,16 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
     font-family:"Alegreya Sans",sans-serif; font-size:19px; line-height:1.55; color:var(--tusz);
     /* warstwy tła: pnącza u góry, krajobraz u dołu, pod spodem pergamin */
     background:
-      url(img/tlo-gora.png) center top / 1920px auto no-repeat,
-      url(img/tlo-dol.png) center bottom / 1920px auto no-repeat,
-      url(img/tlo-pergamin.jpg) center top / 1920px auto repeat-y;
+      url(img/tlo-gora.webp) center top / 1920px auto no-repeat,
+      url(img/tlo-dol.webp) center bottom / 1920px auto no-repeat,
+      url(img/tlo-pergamin.webp) center top / 1920px auto repeat-y;
     background-color:#f2d9a6;
     padding-bottom:360px;      /* miejsce na krajobraz – stopka wchodzi w jego przejrzystą górną część */
   }
   .kolumna{width:var(--kolumna); margin:0 auto; position:relative}
 
   /* SEKCJA 1 – aplikacja */
-  .hero{position:relative; height:675px; background:url(img/hero.jpg) center/cover no-repeat;
+  .hero{position:relative; height:675px; background:url(img/hero.webp) center/cover no-repeat;
     box-shadow:0 10px 30px rgba(40,25,5,.35)}
   .hero .blok{position:absolute; left:100px; top:96px; width:530px}
   .hero h1{font-size:40px; line-height:1.1; color:#f7e3b0; margin-bottom:12px;
@@ -66,7 +66,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
   .hero .zdanie{margin:0 0 22px; font-size:19px; line-height:1.42; font-weight:500; color:#fbf1dc;
     text-shadow:0 1px 4px rgba(0,0,0,.95), 0 0 18px rgba(0,0,0,.6)}
   .hero .start{position:relative; display:block; width:306px; height:60px;
-    background:url(img/przycisk-aplikacja.png) center/contain no-repeat;
+    background:url(img/przycisk-aplikacja.webp) center/contain no-repeat;
     transition:transform .15s ease, filter .15s ease; filter:drop-shadow(0 4px 10px rgba(0,0,0,.5))}
   .hero .start:hover{transform:translateY(-2px); filter:drop-shadow(0 6px 14px rgba(0,0,0,.6)) brightness(1.08)}
   .hero .start span{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)}
@@ -74,7 +74,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
     text-shadow:0 1px 3px rgba(0,0,0,.9)}
 
   /* SEKCJA 2 – wejście do katalogu */
-  .wejscie{position:relative; height:569px; background:url(img/katalog-tlo.png) center/cover no-repeat}
+  .wejscie{position:relative; height:569px; background:url(img/katalog-tlo.webp) center/cover no-repeat}
   .wejscie .tekst{position:absolute; left:90px; top:58px; width:620px}
   .oczko{font-family:"Alegreya Sans",sans-serif; font-weight:500; font-size:15px; letter-spacing:.14em;
     text-transform:uppercase; color:var(--sepia); margin:0 0 6px}
@@ -202,18 +202,18 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
   @media (max-width: 760px){
     body{min-width:0; font-size:17px;
       background:
-        url(img/tlo-gora.png) center top / 900px auto no-repeat,
-        url(img/tlo-dol.png) center bottom / 1000px auto no-repeat,
-        url(img/tlo-pergamin.jpg) center top / 1000px auto repeat-y;
+        url(img/tlo-gora.webp) center top / 900px auto no-repeat,
+        url(img/tlo-dol.webp) center bottom / 1000px auto no-repeat,
+        url(img/tlo-pergamin.webp) center top / 1000px auto repeat-y;
       background-color:#f2d9a6; padding-bottom:250px}
     .kolumna{width:auto; margin:0}
 
     /* panel 1 – obraz z napisem */
     .hero{height:auto; background:none; box-shadow:none}
-    .hero-obraz{display:block; aspect-ratio:1170/1000; background:url(img/mobile-panel-swiatynia.jpg) center / cover no-repeat}
+    .hero-obraz{display:block; aspect-ratio:1170/1000; background:url(img/mobile-panel-swiatynia.webp) center / cover no-repeat}
     /* panel 2 – tekst na tle dżungli */
     .hero .blok{position:static; width:auto; padding:34px 20px 36px;
-      background:#0d1408 url(img/mobile-panel-tekst.jpg) center / cover no-repeat}
+      background:#0d1408 url(img/mobile-panel-tekst.webp) center / cover no-repeat}
     .hero h1{font-size:30px}
     .hero .wstep{font-size:17px}
     .hero h2{font-size:25px}
@@ -224,7 +224,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
 
     /* wejście do katalogu – sześciokąty, tekst pod nimi */
     .wejscie{height:auto; background:none}
-    .wejscie-obraz{display:block; aspect-ratio:1170/1320; background:url(img/mobile-szesciokaty.jpg) center / cover no-repeat}
+    .wejscie-obraz{display:block; aspect-ratio:1170/1320; background:url(img/mobile-szesciokaty.webp) center / cover no-repeat}
     .wejscie .tekst{position:static; width:auto; padding:22px 20px 8px}
     .wejscie h1{font-size:28px}
     .wejscie p{font-size:17px}
@@ -235,16 +235,16 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
     .zakladki button{position:relative; flex:1 1 0; min-width:0; width:auto; height:auto; aspect-ratio:1;
       background-size:contain !important; background-repeat:no-repeat; background-position:center}
     .zakladki button:hover{transform:none}
-    .zakladki button[data-etap=wszystkie]{background-image:url(img/przycisk-wszystkie.png) !important}
-    .zakladki button[data-etap=doswiadczenie]{background-image:url(img/przycisk-doswiadczenie.png) !important}
-    .zakladki button[data-etap=refleksja]{background-image:url(img/przycisk-refleksja.png) !important}
-    .zakladki button[data-etap=teoria]{background-image:url(img/przycisk-teoria.png) !important}
-    .zakladki button[data-etap=pragmatyka]{background-image:url(img/przycisk-pragmatyka.png) !important}
-    .zakladki button[data-etap=wszystkie][aria-pressed=true]{background-image:url(img/przycisk-wszystkie-aktywny.png) !important}
-    .zakladki button[data-etap=doswiadczenie][aria-pressed=true]{background-image:url(img/przycisk-doswiadczenie-aktywny.png) !important}
-    .zakladki button[data-etap=refleksja][aria-pressed=true]{background-image:url(img/przycisk-refleksja-aktywny.png) !important}
-    .zakladki button[data-etap=teoria][aria-pressed=true]{background-image:url(img/przycisk-teoria-aktywny.png) !important}
-    .zakladki button[data-etap=pragmatyka][aria-pressed=true]{background-image:url(img/przycisk-pragmatyka-aktywny.png) !important}
+    .zakladki button[data-etap=wszystkie]{background-image:url(img/przycisk-wszystkie.webp) !important}
+    .zakladki button[data-etap=doswiadczenie]{background-image:url(img/przycisk-doswiadczenie.webp) !important}
+    .zakladki button[data-etap=refleksja]{background-image:url(img/przycisk-refleksja.webp) !important}
+    .zakladki button[data-etap=teoria]{background-image:url(img/przycisk-teoria.webp) !important}
+    .zakladki button[data-etap=pragmatyka]{background-image:url(img/przycisk-pragmatyka.webp) !important}
+    .zakladki button[data-etap=wszystkie][aria-pressed=true]{background-image:url(img/przycisk-wszystkie-aktywny.webp) !important}
+    .zakladki button[data-etap=doswiadczenie][aria-pressed=true]{background-image:url(img/przycisk-doswiadczenie-aktywny.webp) !important}
+    .zakladki button[data-etap=refleksja][aria-pressed=true]{background-image:url(img/przycisk-refleksja-aktywny.webp) !important}
+    .zakladki button[data-etap=teoria][aria-pressed=true]{background-image:url(img/przycisk-teoria-aktywny.webp) !important}
+    .zakladki button[data-etap=pragmatyka][aria-pressed=true]{background-image:url(img/przycisk-pragmatyka-aktywny.webp) !important}
 
     /* karty – jedna kolumna */
     .siatka{grid-template-columns:1fr; gap:20px; padding:0 16px}
@@ -382,7 +382,7 @@ ARTYKULY.forEach(a => {
   k.innerHTML = `
     <div class="ilustracja" style="background-image:url(${a.karta})"></div>
     <div class="tresc">
-      <div class="etap"><img class="znak" src="img/ikona-${a.etap}.png" alt="" onerror="this.remove()">${e.nazwa}${a.nowy ? '<span class="nowe">Nowe</span>' : ""}</div>
+      <div class="etap"><img class="znak" src="img/ikona-${a.etap}.webp" alt="" onerror="this.remove()">${e.nazwa}${a.nowy ? '<span class="nowe">Nowe</span>' : ""}</div>
       <h3>${a.tytul}</h3>
       <p>${a.lead}</p>
       <span class="czytaj">Czytaj →</span>
@@ -409,7 +409,7 @@ function wybierz(etap, strona, przewin){
 
   zakladki.querySelectorAll("button").forEach(b => {
     const akt = b.dataset.etap === etap;
-    b.style.backgroundImage = `url(img/zakladka-${b.dataset.etap}${akt ? "-aktywna" : ""}.png)`;
+    b.style.backgroundImage = `url(img/zakladka-${b.dataset.etap}${akt ? "-aktywna" : ""}.webp)`;
     b.setAttribute("aria-pressed", akt);
   });
   document.querySelectorAll(".hex").forEach(h => h.classList.toggle("aktywny", h.dataset.etap === etap));
@@ -439,14 +439,14 @@ document.querySelectorAll(".hex").forEach(h => h.addEventListener("click", () =>
   wybierz(widok.etap === h.dataset.etap ? "wszystkie" : h.dataset.etap, 1, true);
 }));
 
-ETAPY.forEach(e => { new Image().src = matchMedia("(max-width: 760px)").matches ? `img/przycisk-${e.id}-aktywny.png` : `img/zakladka-${e.id}-aktywna.png`; });
+ETAPY.forEach(e => { new Image().src = matchMedia("(max-width: 760px)").matches ? `img/przycisk-${e.id}-aktywny.webp` : `img/zakladka-${e.id}-aktywna.webp`; });
 wybierz(widok.etap, widok.strona);
 
 
 /* WIDOK ARTYKUŁU – adres #id */
 const art = document.getElementById("art");
-const przyciskKatalog = `<a class="powrot" href="#katalog" title="Wróć do katalogu pomysłów"><img src="img/przycisk-katalog.png" alt="Katalog pomysłów"></a>`;
-const etykieta = e => `<div class="etap" style="--kolor:var(--${e})"><img class="znak" src="img/ikona-${e}.png" alt="" onerror="this.remove()">${NAZWY[e]}</div>`;
+const przyciskKatalog = `<a class="powrot" href="#katalog" title="Wróć do katalogu pomysłów"><img src="img/przycisk-katalog.webp" alt="Katalog pomysłów"></a>`;
+const etykieta = e => `<div class="etap" style="--kolor:var(--${e})"><img class="znak" src="img/ikona-${e}.webp" alt="" onerror="this.remove()">${NAZWY[e]}</div>`;
 
 /* Pasek boczny: druga część serii na pierwszym miejscu, reszta losowo, z możliwie różnych etapów */
 function propozycje(a){
@@ -464,7 +464,7 @@ function propozycje(a){
 
 function przyciskPdf(a){
   if (!a.pdf || !a.pdfGotowy) return "";
-  return `<p class="pobierz"><a href="${a.pdf}" download title="Pobierz plik PDF"><img src="img/przycisk-pdf.png" alt="Pobierz PDF" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'pobierz-tekst',textContent:'Pobierz PDF'}))"></a></p>`;
+  return `<p class="pobierz"><a href="${a.pdf}" download title="Pobierz plik PDF"><img src="img/przycisk-pdf.webp" alt="Pobierz PDF" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'pobierz-tekst',textContent:'Pobierz PDF'}))"></a></p>`;
 }
 
 function pokaz(){

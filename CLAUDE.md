@@ -14,7 +14,8 @@ Strona dla trenerów prowadzących grę szkoleniową „Starożytna Świątynia�
 
 - `index.html` – szablon strony (komputer, tablet, telefon w jednym pliku; wersja mobilna w `@media (max-width: 760px)`).
 - `artykuly.js` – treści wszystkich artykułów; opis pól na początku pliku.
-- `img/` – grafiki; ilustracje artykułów: `artykul-[id].jpg` (1536 × 640 px) i `artykul-[id]-karta.jpg` (564 × 352 px).
+- `img/` – grafiki strony w formacie WebP (tła, przyciski, ikony – lekkie pliki, szybkie wczytywanie); ilustracje artykułów w JPG: `artykul-[id].jpg` (1536 × 640 px) i `artykul-[id]-karta.jpg` (564 × 352 px). Nowe grafiki strony zapisywać jako WebP (jakość 80, przyciski i ikony 90); łączna waga strony przy pierwszym wejściu ok. 1,5 MB – pilnować, by nie rosła.
+- Film: H.264 ok. 1 Mb/s, 960 × 540, `+faststart` (ok. 34 MB). Nowy film przekodować tak samo przed wgraniem.
 - `pliki/` – PDF-y do pobrania (`[id].pdf`).
 - `aplikacja/index.html` – aplikacja do gry; film `aplikacja/starozytna-swiatynia-film.mp4` (ta sama nazwa co w osobnej wersji offline).
 - `fonty/` – kroje Alegreya i Alegreya Sans.
