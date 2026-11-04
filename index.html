@@ -105,6 +105,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
   .karta:hover{transform:translateY(-3px); box-shadow:0 10px 26px rgba(80,50,10,.22)}
   .karta[hidden]{display:none}
   .ilustracja{aspect-ratio:8/5; background:#e9d3a8 center/cover no-repeat; position:relative}
+  img.ilustracja{display:block; width:100%; height:auto; object-fit:cover}
   .ilustracja.brak{background:repeating-linear-gradient(45deg,#ead6ae 0 12px,#e3cb9c 12px 24px);
     display:flex; align-items:center; justify-content:center; text-align:center;
     font-size:14px; color:var(--sepia); border-bottom:1px dashed rgba(122,90,50,.5)}
@@ -204,7 +205,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
       background:
         url(img/tlo-gora.webp) center top / 900px auto no-repeat,
         url(img/tlo-dol.webp) center bottom / 1000px auto no-repeat,
-        url(img/tlo-pergamin.webp) center top / 1000px auto repeat-y;
+        url(img/tlo-pergamin-mobile.webp) center top / 1000px auto repeat-y;
       background-color:#f2d9a6; padding-bottom:250px}
     .kolumna{width:auto; margin:0}
 
@@ -380,7 +381,7 @@ ARTYKULY.forEach(a => {
   k.className = "karta"; k.href = `#${a.id}`;
   k.style.setProperty("--kolor", e.kolor);
   k.innerHTML = `
-    <div class="ilustracja" style="background-image:url(${a.karta})"></div>
+    <img class="ilustracja" src="${a.karta}" alt="" loading="lazy" decoding="async" width="564" height="352">
     <div class="tresc">
       <div class="etap"><img class="znak" src="img/ikona-${a.etap}.webp" alt="" onerror="this.remove()">${e.nazwa}${a.nowy ? '<span class="nowe">Nowe</span>' : ""}</div>
       <h3>${a.tytul}</h3>
