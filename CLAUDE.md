@@ -29,6 +29,7 @@ Strona dla trenerów prowadzących grę szkoleniową „Starożytna Świątynia�
 4. PDF (jeśli jest): `pliki/[id].pdf`, w bloku `pdf` i `pdfGotowy: true`, znacznik `<!--PDF-->` w treści w miejscu przycisku.
 5. Literatura cytowana: pole `literatura` (lista), odwołania w tekście w nawiasie: (1), (2).
 6. Test, podgląd, akceptacja, commit, push. Strona odświeża się po około minucie.
+7. Przy każdej zmianie `artykuly.js` zmień znacznik wersji w `index.html` (`artykuly.js?v=RRRR-MM-DD`) – przeglądarki trzymają stary plik do 10 minut. Przy zmianie nazw plików stare zostawiaj na serwerze jeszcze przez kilka dni.
 
 ## Ustalenia, których nie zmieniać bez zgody właściciela
 
