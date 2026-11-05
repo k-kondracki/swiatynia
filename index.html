@@ -367,7 +367,10 @@ try { if (matchMedia("(any-pointer: fine)").matches) { var o=null; try { o=local
   pola.forEach((p,i)=>{
     p.addEventListener("input",()=>{p.value=p.value.replace(/\D/g,"").slice(-1); if(p.value&&pola[i+1]) pola[i+1].focus();
       if(pola.every(x=>x.value)) brama.querySelector("form").requestSubmit();});
-    p.addEventListener("keydown",e=>{if(e.key==="Backspace"&&!p.value&&pola[i-1]){pola[i-1].focus();pola[i-1].value="";}});
+    p.addEventListener("keydown",e=>{
+      if(/^[0-9]$/.test(e.key)&&!e.ctrlKey&&!e.metaKey&&!e.altKey){ e.preventDefault(); p.value=e.key;
+        if(pola[i+1]) pola[i+1].focus(); if(pola.every(x=>x.value)) brama.querySelector("form").requestSubmit(); return; }
+      if(e.key==="Backspace"&&!p.value&&pola[i-1]){pola[i-1].focus();pola[i-1].value="";}});
     p.addEventListener("paste",e=>{const t=(e.clipboardData.getData("text")||"").replace(/\D/g,"").slice(0,4);
       if(t.length===4){e.preventDefault();t.split("").forEach((c,j)=>pola[j].value=c);brama.querySelector("form").requestSubmit();}});
   });
