@@ -12,7 +12,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
 /* duże obrazy górnej części pobierane w pierwszej kolejności (telefon: panel mobilny; komputer i tablet: obraz świątyni i tło katalogu) */
 try { (Math.min(screen.width, screen.height) < 600 ? ["mobile-panel-swiatynia"] : ["hero","katalog-tlo"]).forEach(function(n){ var l=document.createElement("link"); l.rel="preload"; l.as="image"; l.href="img/"+n+".webp"; l.fetchPriority="high"; document.head.appendChild(l); }); } catch (e) {}
 /* komputer bez zapamiętanego PIN-u: ekran wejścia (#brama) */
-try { if (matchMedia("(any-pointer: fine)").matches) { var o=null; try { o=localStorage.getItem("swiatynia-wejscie"); } catch(e) {} if (o!=="6093eafbe61135879e19b97fa2975ac7776adae9719c73f11ba819fd850e5e16") document.documentElement.classList.add("zamkniete"); } } catch (e) {}
+try { if (matchMedia("(any-pointer: fine)").matches) { var o=null; try { o=localStorage.getItem("swiatynia-wejscie"); } catch(e) {} if (o!=="6093eafbe61135879e19b97fa2975ac7776adae9719c73f11ba819fd850e5e16") { document.documentElement.classList.add("zamkniete"); var w=document.createElement("link"); w.rel="preload"; w.as="image"; w.href="img/wejscie-tlo.webp"; w.fetchPriority="high"; document.head.appendChild(w); } } } catch (e) {}
 </script>
 <meta name="robots" content="noindex, nofollow">
 <style>
