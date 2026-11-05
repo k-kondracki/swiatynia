@@ -9,6 +9,8 @@
 try { if (Math.min(screen.width, screen.height) < 600) document.getElementById("vp").setAttribute("content", "width=device-width, initial-scale=1"); } catch (e) {}
 /* urządzenie bez myszy i touchpada (telefon, tablet): zamiast przycisku aplikacji – informacja */
 try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.classList.add("dotyk"); } catch (e) {}
+/* duże obrazy górnej części pobierane w pierwszej kolejności (telefon: panel mobilny; komputer i tablet: obraz świątyni i tło katalogu) */
+try { (Math.min(screen.width, screen.height) < 600 ? ["mobile-panel-swiatynia"] : ["hero","katalog-tlo"]).forEach(function(n){ var l=document.createElement("link"); l.rel="preload"; l.as="image"; l.href="img/"+n+".webp"; l.fetchPriority="high"; document.head.appendChild(l); }); } catch (e) {}
 </script>
 <meta name="robots" content="noindex, nofollow">
 <style>
@@ -45,7 +47,6 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
     /* warstwy tła: pnącza u góry, krajobraz u dołu, pod spodem pergamin */
     background:
       url(img/tlo-gora.webp) center top / 1920px auto no-repeat,
-      url(img/tlo-dol.webp) center bottom / 1920px auto no-repeat,
       url(img/tlo-pergamin.webp) center top / 1920px auto repeat-y;
     background-color:#f2d9a6;
     padding-bottom:360px;      /* miejsce na krajobraz – stopka wchodzi w jego przejrzystą górną część */
@@ -53,7 +54,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
   .kolumna{width:var(--kolumna); margin:0 auto; position:relative}
 
   /* SEKCJA 1 – aplikacja */
-  .hero{position:relative; height:675px; background:url(img/hero.webp) center/cover no-repeat;
+  .hero{position:relative; height:675px; background:url(img/hero.webp) center/cover no-repeat, url(data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBQCdASogABIAPu1kqk+ppSOiMBgIATAdiWMAuzNVxSIaDI521r3D83P+n68d7eVg95GJ0AD+7I86AucuLzHC5+D6ag40jVkmZOr442exiSDxMM2fs5LN7J9Z7xeIl7jxaCr5IAC6OTJ0q3ZLLThvc5qm7BxmICJ0lesKAYMYJvIe94FMshhnKPNZmtLi//9se2qeNz+1eOO81M+HqhZhYtP/TwdTBl0l6B2FCkkHwaFrQg1NSI53OQGiAAAA) center/cover no-repeat;
     box-shadow:0 10px 30px rgba(40,25,5,.35)}
   .hero .blok{position:absolute; left:100px; top:96px; width:530px}
   .hero h1{font-size:40px; line-height:1.1; color:#f7e3b0; margin-bottom:12px;
@@ -74,7 +75,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
     text-shadow:0 1px 3px rgba(0,0,0,.9)}
 
   /* SEKCJA 2 – wejście do katalogu */
-  .wejscie{position:relative; height:569px; background:url(img/katalog-tlo.webp) center/cover no-repeat}
+  .wejscie{position:relative; height:569px; background:url(img/katalog-tlo.webp) center/cover no-repeat, url(data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAACQBACdASogAA8APu1iqU2ppaOiMAgBMB2JZACdAYv2tXFBCQ9P7ZYULhUfG0AA/uivEdR04QZymXi3VZ8Dm0+oIJ+H/Tqp4yOMuaq7pm0t6dF66U3r17prH4xqAI/HOA6jhjDMX+N/fV5VIP5HYQtK531BpyCSh88UvGLD0xrjkL1MCQML2Norc4b6PFhfMsmm2oNjhluwwhsDcoGpdTfJOkzKFgsg1MAPyWrOf7KagSRgAAA=) center/cover no-repeat}
   .wejscie .tekst{position:absolute; left:90px; top:58px; width:620px}
   .oczko{font-family:"Alegreya Sans",sans-serif; font-weight:500; font-size:15px; letter-spacing:.14em;
     text-transform:uppercase; color:var(--sepia); margin:0 0 6px}
@@ -204,14 +205,13 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
     body{min-width:0; font-size:17px;
       background:
         url(img/tlo-gora.webp) center top / 900px auto no-repeat,
-        url(img/tlo-dol.webp) center bottom / 1000px auto no-repeat,
         url(img/tlo-pergamin-mobile.webp) center top / 1000px auto repeat-y;
       background-color:#f2d9a6; padding-bottom:250px}
     .kolumna{width:auto; margin:0}
 
     /* panel 1 – obraz z napisem */
     .hero{height:auto; background:none; box-shadow:none}
-    .hero-obraz{display:block; aspect-ratio:1170/1000; background:url(img/mobile-panel-swiatynia.webp) center / cover no-repeat}
+    .hero-obraz{display:block; aspect-ratio:1170/1000; background:url(img/mobile-panel-swiatynia.webp) center / cover no-repeat, url(data:image/webp;base64,UklGRmABAABXRUJQVlA4IFQBAACQBwCdASogABsAPu1iqU2ppaOiMAgBMB2JZgCdMoSBUXA6QOytMgVvNxprVzjMpeJTwyEcaF2WVe7NVX8OShHN4u+UlvAA/sxf7dyvqf9mdB/tXhdb7XIXkbaMl8PMBM7dmUa9OiTiMSGIIIwXsCXrt1a5i0YvoXAYZiMeSiuo03HqgFLGvbe39ooZzQIaVzEuNClXVIj8/Uh07e+ZRf7yU/2nNz1pl/Mo3LrIEOrP7Dq0GVN812Nd482l7JqQBJVMRCFQe4rEZFAhSvvcEZ4M0Gn8ShUc7BURH296T3uRxFpF0PHhj7vNSmsimv83y6I8in/oTknE9YRGxfUAzNXFIaMPlcPhLZY8I+gpdz1p1NKhqf7vh895XOibU3bQbQB8wM6ciiLsio+L4QyoGeclrau1NaxkM+q+y/x2i2Q7OdPEQXew2jMiG/XjqQ9YKmB28gAA) center/cover no-repeat}
     /* panel 2 – tekst na tle dżungli */
     .hero .blok{position:static; width:auto; padding:34px 20px 36px;
       background:#0d1408 url(img/mobile-panel-tekst.webp) center / cover no-repeat}
@@ -225,7 +225,7 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
 
     /* wejście do katalogu – sześciokąty, tekst pod nimi */
     .wejscie{height:auto; background:none}
-    .wejscie-obraz{display:block; aspect-ratio:1170/1320; background:url(img/mobile-szesciokaty.webp) center / cover no-repeat}
+    .wejscie-obraz{display:block; aspect-ratio:1170/1320; background:url(img/mobile-szesciokaty.webp) center / cover no-repeat, url(data:image/webp;base64,UklGRogBAABXRUJQVlA4IHwBAABwCACdASogACQAPu1eqE4ppKOiMBqqqTAdiWoAriGv8ZZa2glNuTetqzrUStXI7U+3ZH2q6JNIr0tgTetvs151PI1XMUuOJ2I/cFYAAP7JtB57b7ufHWF3YCvdX9/Ckq3cLffuk2OI8MDhN2yit8empk8lhlCYWm1D5iF61CGliafmLaMSzB+Fl5tyLTCereylhk/4BBO55dewjmHrFKhb9zPz+5dc/IMDiv29Km+PMozNWFP3izkp6uXd/SIG6C7qe/XbqcP/3wEKSOERyMmm2v7dwtUcqtk3RbRszqK0mlMiR7G4TWPsKKzpkBtSpp/1pG8KAPxtxc3yVerLgs7E451QlNKqf7SQhl9uqJ+PITinbwyK4sUsvXezjWP+W57hgBsSlfM7/c+FR+bMn+RtlEgUiQ72hDdrTHJTJ6gr91sJgvycYLijaBPUZ7TAz6lptCb+y8XQt9JMRpWWp14DbzeOID5llCywTurdIBlX0YLqPUJrznL0yAAAAA==) center/cover no-repeat}
     .wejscie .tekst{position:static; width:auto; padding:22px 20px 8px}
     .wejscie h1{font-size:28px}
     .wejscie p{font-size:17px}
@@ -269,6 +269,19 @@ try { if (!matchMedia("(any-pointer: fine)").matches) document.documentElement.c
     #art .boczny .gora{display:none}
     #art .czytaj-takze{display:block; font-size:24px; margin:34px 0 14px; padding-top:22px; border-top:1px solid rgba(122,90,50,.35)}
     #art .obraz{border-radius:3px}
+  }
+  /* dolny krajobraz dociągany po wczytaniu strony (klasa "wczytane") – nie spowalnia górnych obrazów */
+  .wczytane body{background:
+      url(img/tlo-gora.webp) center top / 1920px auto no-repeat,
+      url(img/tlo-dol.webp) center bottom / 1920px auto no-repeat,
+      url(img/tlo-pergamin.webp) center top / 1920px auto repeat-y;
+    background-color:#f2d9a6}
+  @media (max-width: 760px){
+    .wczytane body{background:
+        url(img/tlo-gora.webp) center top / 900px auto no-repeat,
+        url(img/tlo-dol.webp) center bottom / 1000px auto no-repeat,
+        url(img/tlo-pergamin-mobile.webp) center top / 1000px auto repeat-y;
+      background-color:#f2d9a6}
   }
 </style>
 </head>
@@ -506,4 +519,5 @@ window.addEventListener("hashchange", pokaz);
 pokaz();
 </script>
 
+<script>addEventListener("load",()=>document.documentElement.classList.add("wczytane"));</script>
 </body></html>

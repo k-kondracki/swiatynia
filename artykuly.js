@@ -7,8 +7,8 @@
    nowy: true  – napis „Nowe” na karcie i miejsce na początku katalogu (usunąć, gdy artykuł przestaje być nowością)
    seria, czesc – tylko artykuły wieloczęściowe: wspólna nazwa serii i numer części
    lead        – zajawka na karcie i pierwszy akapit artykułu (ok. 300 znaków)
-   ilustracja  – img/artykul-[id].jpg (1536 × 640 px)
-   karta       – img/artykul-[id]-karta.jpg (564 × 352 px)
+   ilustracja  – img/artykul-[id].webp (1536 × 640 px)
+   karta       – img/artykul-[id]-karta.webp (564 × 352 px)
    pdf         – plik do pobrania (w folderze pliki); przycisk pojawia się w miejscu znacznika <!--PDF--> w treści
    pdfGotowy: true – plik jest już w folderze pliki (bez tego przycisk się nie wyświetla)
    literatura  – lista pozycji „Literatura cytowana”; odwołania w tekście w nawiasie: (1), (2)…
@@ -20,8 +20,8 @@ window.ARTYKULY = [
   etap: "doswiadczenie",
   tytul: "Stopklatka – chwila namysłu w środku gry",
   lead: "Zdarza się, że zespół wchodzi w ślepą uliczkę i z każdą minutą oddala się od celu. Trener, który to dostrzeże, może sięgnąć po stopklatkę. Krótka pauza daje graczom oddech i dystans, a pytania trenera pomagają im samodzielnie obrać nowy kierunek. Po wznowieniu gry zespół wdraża własne pomysły na korektę.",
-  ilustracja: "img/artykul-stopklatka.jpg",
-  karta: "img/artykul-stopklatka-karta.jpg",
+  ilustracja: "img/artykul-stopklatka.webp",
+  karta: "img/artykul-stopklatka-karta.webp",
   tresc: `
 <p>Stopklatka to technika zaczerpnięta z dramy, gdzie oznacza zatrzymanie akcji w znaczącym momencie, aby przyjrzeć się wydarzeniu z bliska. W Starożytnej Świątyni stopklatka zachowuje tę logikę: trener zatrzymuje grę i czas, a zespół, zawieszony w środku narady, przygląda się temu, co dzieje się w grupie i dokąd zmierza jej działanie.</p>
 <h2>Kiedy sięgnąć po stopklatkę</h2>
@@ -44,8 +44,8 @@ window.ARTYKULY = [
   etap: "doswiadczenie",
   tytul: "Korekta kursu – dogrywka po naradzie",
   lead: "Bywa, że czas mija, a mozaika pozostaje niedokończona. Trener może wtedy zarządzić dogrywkę. Zespół wraca do narady, przygląda się swojej strategii i uzgadnia jej korektę, a potem znów przystępuje do działania. Grupa sprawdza w praktyce własne wnioski i kończy grę z doświadczeniem skutecznej współpracy.",
-  ilustracja: "img/artykul-korekta-kursu.jpg",
-  karta: "img/artykul-korekta-kursu-karta.jpg",
+  ilustracja: "img/artykul-korekta-kursu.webp",
+  karta: "img/artykul-korekta-kursu-karta.webp",
   tresc: `
 <p>Doświadczenie korekcyjne to pojęcie zaczerpnięte z psychoterapii. Oznacza ponowne zmierzenie się, w korzystniejszych warunkach, z sytuacją, która wcześniej zakończyła się niepowodzeniem – tak, by nowe przeżycie zmieniło jej znaczenie. W Starożytnej Świątyni taką sytuację tworzy dogrywka. To nie jest nowa rozgrywka, lecz ciąg dalszy tej samej: ten sam zespół, te same kafle i to samo zadanie, tym razem z wnioskami z pierwszego podejścia.</p>
 <h2>Kiedy sięgnąć po dogrywkę</h2>
@@ -65,8 +65,8 @@ window.ARTYKULY = [
   etap: "doswiadczenie",
   tytul: "Ilu graczy wokół planszy?",
   lead: "Starożytną Świątynię można rozegrać zarówno w kameralnym gronie, jak i w zespole ponad dwudziestoosobowym. Dynamika pracy i towarzyszące jej zjawiska psychologiczne wyglądają inaczej w małej, a inaczej w większej grupie. Ta wiedza pozwala trenerowi dopasować prowadzenie gry do potrzeb zespołu.",
-  ilustracja: "img/artykul-ilu-graczy.jpg",
-  karta: "img/artykul-ilu-graczy-karta.jpg",
+  ilustracja: "img/artykul-ilu-graczy.webp",
+  karta: "img/artykul-ilu-graczy-karta.webp",
   literatura: [
     "Fay, N., Garrod, S., Carletta, J. (2000). Group discussion as interactive dialogue or as serial monologue: The influence of group size. Psychological Science, 11(6), 481–486.",
     "Latané, B., Williams, K., Harkins, S. (1979). Many hands make light the work: The causes and consequences of social loafing. Journal of Personality and Social Psychology, 37(6), 822–832.",
@@ -90,8 +90,8 @@ window.ARTYKULY = [
   etap: "refleksja",
   tytul: "Spojrzenie z zewnątrz – rola obserwatora",
   lead: "Pod presją czasu emocje rosną z każdą minutą. Gracze tracą dystans do tego, co dzieje się w zespole. Obserwator śledzi rozgrywkę z zewnątrz i notuje konkretne zachowania. W trakcie omówienia jego chłodne spostrzeżenia spotykają się z gorącymi reakcjami graczy i pokazują zespołowi jego pracę w nowym świetle.",
-  ilustracja: "img/artykul-obserwator.jpg",
-  karta: "img/artykul-obserwator-karta.jpg",
+  ilustracja: "img/artykul-obserwator.webp",
+  karta: "img/artykul-obserwator-karta.webp",
   tresc: `
 <p>Obserwator to rola wyznaczona przed rozpoczęciem gry. Zamiast kafli otrzymuje arkusz obserwacyjny albo instrukcję precyzującą jego rolę. Stoi poza rozgrywką i rejestruje to, co gracze zapamiętują wybiórczo, a często w zmienionej formie: treść wypowiedzi, sposób mówienia, zachowania niewerbalne, działania i interakcje między graczami.</p>
 <h2>Co rejestruje obserwator</h2>
@@ -113,8 +113,8 @@ window.ARTYKULY = [
   seria: "pytania-po-grze",
   czesc: 1,
   lead: "Omówienie po grze przynosi najwięcej, gdy pytania trafiają w to, czego grupa sama doświadczyła. Ten zestaw rozwija ogólne pytania z instrukcji o pięć obszarów: komunikację, współpracę, emocje, zaufanie i presję czasu. Trener wybiera z niego wątki, które w danej rozgrywce wybrzmiały najmocniej.",
-  ilustracja: "img/artykul-pytania-po-grze-1.jpg",
-  karta: "img/artykul-pytania-po-grze-1-karta.jpg",
+  ilustracja: "img/artykul-pytania-po-grze-1.webp",
+  karta: "img/artykul-pytania-po-grze-1-karta.webp",
   pdf: "pliki/pytania-po-grze-1.pdf",
   pdfGotowy: true,
   tresc: `
@@ -143,8 +143,8 @@ window.ARTYKULY = [
   seria: "pytania-po-grze",
   czesc: 2,
   lead: "W klasycznym przebiegu gry nikt nie wyznacza lidera ani nie rozdziela ról. Przywództwo, podział pracy i sposób podejmowania decyzji wyłaniają się w trakcie narady. Druga część pytań po grze pomaga przyjrzeć się temu, jak zespół sam się zorganizował i jaki miało to wpływ na realizację zadania.",
-  ilustracja: "img/artykul-pytania-po-grze-2.jpg",
-  karta: "img/artykul-pytania-po-grze-2-karta.jpg",
+  ilustracja: "img/artykul-pytania-po-grze-2.webp",
+  karta: "img/artykul-pytania-po-grze-2-karta.webp",
   pdf: "pliki/pytania-po-grze-2.pdf",
   pdfGotowy: true,
   tresc: `
@@ -171,8 +171,8 @@ window.ARTYKULY = [
   etap: "teoria",
   tytul: "Kto kim jest w zespole – role Belbina",
   lead: "Role w Starożytnej Świątyni wyłaniają się spontanicznie, w trakcie wspólnej pracy nad zadaniem. Model ról zespołowych Belbina pozwala je nazwać i zobaczyć, co każda z nich wnosi do działania zespołu. Daje też trenerowi wspólny język do rozmowy z uczestnikami o tym, jak wykorzystali swoje mocne strony.",
-  ilustracja: "img/artykul-belbin.jpg",
-  karta: "img/artykul-belbin-karta.jpg",
+  ilustracja: "img/artykul-belbin.webp",
+  karta: "img/artykul-belbin-karta.webp",
   tresc: `
 <p>Rola zespołowa to charakterystyczny sposób, w jaki człowiek zachowuje się w zespole i włącza w realizację zadania. Model opisuje dziewięć ról. Każda ma swoje mocne strony i dopuszczalne słabości, a najwięcej wnosi na określonym etapie pracy: od ustalenia celu, przez pomysły i plan, po doprowadzenie zadania do końca.</p>
 <h2>Role przy planszy</h2>
@@ -192,8 +192,8 @@ window.ARTYKULY = [
   etap: "pragmatyka",
   tytul: "Od świątyni do poniedziałku – pytania, które przenoszą doświadczenie do pracy",
   lead: "Gra kończy się ułożeniem mozaiki, ale jej prawdziwa wartość ujawnia się dopiero w codziennej pracy. Pytania pomostowe pomagają uczestnikom odnaleźć w codziennych sytuacjach to, czego doświadczyli przy planszy, i to, co w pracy działa inaczej. Dzięki temu wnioski z gry stają się konkretne i realne.",
-  ilustracja: "img/artykul-od-swiatyni-do-poniedzialku.jpg",
-  karta: "img/artykul-od-swiatyni-do-poniedzialku-karta.jpg",
+  ilustracja: "img/artykul-od-swiatyni-do-poniedzialku.webp",
+  karta: "img/artykul-od-swiatyni-do-poniedzialku-karta.webp",
   pdf: "pliki/od-swiatyni-do-poniedzialku.pdf",
   pdfGotowy: true,
   tresc: `
@@ -222,8 +222,8 @@ window.ARTYKULY = [
   etap: "pragmatyka",
   tytul: "Karta Transferu – od wniosków do działania",
   lead: "Karta Transferu zamienia wnioski z gry w osobiste zobowiązanie. Każdy uczestnik zapisuje na niej swoje odkrycie, cel, pierwsze działanie i termin sprawdzenia efektów. Karta domyka szkolenie, a po kilku tygodniach staje się punktem wyjścia do rozmowy o tym, co uczestnicy wprowadzili w życie.",
-  ilustracja: "img/artykul-karta-transferu.jpg",
-  karta: "img/artykul-karta-transferu-karta.jpg",
+  ilustracja: "img/artykul-karta-transferu.webp",
+  karta: "img/artykul-karta-transferu-karta.webp",
   pdf: "pliki/karta-transferu.pdf",
   pdfGotowy: true,
   tresc: `
@@ -250,8 +250,8 @@ window.ARTYKULY = [
   etap: "teoria",
   tytul: "Przywództwo sytuacyjne – jeden zespół, różne potrzeby",
   lead: "Jeden gracz rwie się do działania, zanim zrozumie zadanie. Inny rozumie je doskonale, ale czeka na zielone światło. Przywództwo sytuacyjne podpowiada, jak prowadzić każdego z nich. Przebieg Starożytnej Świątyni daje dobre pole do wprowadzenia tej koncepcji, a sytuacje z gry stają się jej żywą ilustracją.",
-  ilustracja: "img/artykul-przywodztwo-sytuacyjne.jpg",
-  karta: "img/artykul-przywodztwo-sytuacyjne-karta.jpg",
+  ilustracja: "img/artykul-przywodztwo-sytuacyjne.webp",
+  karta: "img/artykul-przywodztwo-sytuacyjne-karta.webp",
   tresc: `
 <p>Model Blancharda zakłada, że sposób prowadzenia dopasowuje się do poziomu rozwoju osoby w konkretnym zadaniu, czyli do jej kompetencji i zaangażowania. Entuzjastyczny początkujący potrzebuje instruowania, rozczarowany uczący się – trenowania, kompetentny, ale ostrożny wykonawca – wspierania, a samodzielny ekspert – delegowania.</p>
 <h2>Model przy planszy</h2>
