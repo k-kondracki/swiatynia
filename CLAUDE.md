@@ -9,6 +9,7 @@ Strona dla trenerów prowadzących grę szkoleniową „Starożytna Świątynia�
 - Przed każdym pushem: sprawdź składnię `artykuly.js` (`node --check artykuly.js`), obecność wszystkich plików, na które wskazują artykuły, i wyświetlanie strony (Playwright: komputer, tablet, telefon – bez błędów w konsoli i bez brakujących plików).
 - Pliki większe niż 95 MB nie trafiają do repozytorium (limit GitHuba: 100 MB).
 - Komunikacja z właścicielem po polsku; zasady pisowni i stylu – w dokumentach projektu „Starożytna świątynia – aplikacja” (Standard inspiracji trenerskich).
+- Pełny opis projektu (gra, aplikacja, strona, procedury, sprawy otwarte) – dokument projektu „Dokumentacja projektu”. Po każdej zmianie artykułów zaktualizuj też dokument projektu „Teksty artykułów” (wierna kopia `artykuly.js`) i tabelę artykułów w „Dokumentacji projektu” (część VI.2); po zmianach w działaniu strony – odpowiednie części „Dokumentacji projektu”.
 
 ## Struktura
 
