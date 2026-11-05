@@ -342,10 +342,10 @@ try { if (matchMedia("(any-pointer: fine)").matches) { var o=null; try { o=local
       <h1>Starożytna Świątynia</h1>
       <p class="opis">Aby wejść na stronę, wpisz czterocyfrowy PIN dostarczony razem z&nbsp;linkiem i&nbsp;kodem&nbsp;QR.</p>
       <div class="szyfr">
-        <input inputmode="numeric" maxlength="1" aria-label="Cyfra 1">
-        <input inputmode="numeric" maxlength="1" aria-label="Cyfra 2">
-        <input inputmode="numeric" maxlength="1" aria-label="Cyfra 3">
-        <input inputmode="numeric" maxlength="1" aria-label="Cyfra 4">
+        <input inputmode="numeric" aria-label="Cyfra 1">
+        <input inputmode="numeric" aria-label="Cyfra 2">
+        <input inputmode="numeric" aria-label="Cyfra 3">
+        <input inputmode="numeric" aria-label="Cyfra 4">
         <button class="otworz" type="submit">Otwórz wrota</button>
       </div>
       <p class="komunikat" aria-live="polite"></p>
@@ -365,7 +365,9 @@ try { if (matchMedia("(any-pointer: fine)").matches) { var o=null; try { o=local
     return hex(await crypto.subtle.deriveBits({name:"PBKDF2",hash:"SHA-256",salt:sol,iterations:PRZEBIEGI},k,256));
   }
   pola.forEach((p,i)=>{
-    p.addEventListener("input",()=>{p.value=p.value.replace(/\D/g,"").slice(-1); if(p.value&&pola[i+1]) pola[i+1].focus();
+    p.addEventListener("input",()=>{ const c=p.value.replace(/\D/g,"");
+      if(c.length>1){ c.slice(0,4-i).split("").forEach((z,j)=>pola[i+j].value=z); (pola[Math.min(i+c.length,3)]).focus(); }
+      else { p.value=c; if(c&&pola[i+1]) pola[i+1].focus(); }
       if(pola.every(x=>x.value)) brama.querySelector("form").requestSubmit();});
     p.addEventListener("keydown",e=>{
       if(/^[0-9]$/.test(e.key)&&!e.ctrlKey&&!e.metaKey&&!e.altKey){ e.preventDefault(); p.value=e.key;
