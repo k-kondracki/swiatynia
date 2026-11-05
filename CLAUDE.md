@@ -21,10 +21,17 @@ Strona dla trenerów prowadzących grę szkoleniową „Starożytna Świątynia�
 - `fonty/` – kroje Alegreya i Alegreya Sans.
 - `robots.txt`, meta `noindex` – strona wyłączona z wyszukiwarek.
 
+## Obrazy i czcionki z jsDelivr
+
+- Obrazy (`img/`) i czcionki (`fonty/`) strona pobiera z sieci jsDelivr, a nie z GitHub Pages (GitHub podaje pliki właścicielowi około 10 razy wolniej). Adres: `https://cdn.jsdelivr.net/gh/k-kondracki/swiatynia@[commit]/…` – w `index.html` (style, skrypty i stała `CDN`, która dokleja adres do ilustracji z `artykuly.js`).
+- `[commit]` to numer wersji repozytorium, w której są wszystkie pliki. Nowa lub zmieniona grafika: najpierw commit i push z plikiem, potem w `index.html` zamień stary numer na nowy (wszystkie wystąpienia) i zrób drugi commit. Przed pushem sprawdź, że każdy plik odpowiada pod nowym adresem (HTTP 200).
+- Na GitHub Pages zostają: strona (`index.html`, `artykuly.js`), PDF-y i aplikacja z filmem (limit jsDelivr: 20 MB na plik).
+- Awaria jsDelivr: zamień adres CDN z powrotem na ścieżki względne (`img/…`, `fonty/…`).
+
 ## Dodanie nowego artykułu
 
 1. Tekst od właściciela: tytuł, etap (doswiadczenie | refleksja | teoria | pragmatyka), lead (~300 znaków, 290–310), treść.
-2. Ilustracje: dwie grafiki według wzoru z dokumentu projektu „Wzór promptu – ilustracje inspiracji trenerskich”; zapisz jako `img/artykul-[id].webp` i `img/artykul-[id]-karta.webp` (WebP, jakość 75) w podanych wymiarach.
+2. Ilustracje (pamiętaj o numerze wersji CDN – sekcja „Obrazy i czcionki z jsDelivr”): dwie grafiki według wzoru z dokumentu projektu „Wzór promptu – ilustracje inspiracji trenerskich”; zapisz jako `img/artykul-[id].webp` i `img/artykul-[id]-karta.webp` (WebP, jakość 75) w podanych wymiarach.
 3. Nowy blok na końcu listy w `artykuly.js`; `id` małymi literami, bez polskich znaków, z łącznikami. Pole `nowy: true` – napis „Nowe” i miejsce na początku katalogu (usunąć na prośbę właściciela). Artykuł wieloczęściowy: `seria` i `czesc`.
 4. PDF (jeśli jest): `pliki/[id].pdf`, w bloku `pdf` i `pdfGotowy: true`, znacznik `<!--PDF-->` w treści w miejscu przycisku.
 5. Literatura cytowana: pole `literatura` (lista), odwołania w tekście w nawiasie: (1), (2).
