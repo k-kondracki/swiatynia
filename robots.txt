@@ -1,2 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# Strona nie trafia do wyszukiwarek dzięki znacznikowi noindex w index.html i aplikacja/index.html.
+# Robot musi móc odczytać stronę, żeby zobaczyć ten znacznik – dlatego bez blokady Disallow.
