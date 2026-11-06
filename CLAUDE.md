@@ -5,7 +5,7 @@ Strona dla trenerów prowadzących grę szkoleniową „Starożytna Świątynia�
 ## Zasady pracy
 
 - Każdą zmianę najpierw opisz, pokaż podgląd (zrzuty: komputer 1440 px, telefon 390 px) i czekaj na wyraźną akceptację. Dopiero potem commit i push na `main`.
-- Nigdy nie nadpisuj historii (bez `push --force`, bez `rebase` opublikowanych commitów). Cofnięcie zmiany = nowy commit przywracający poprzednią wersję (`git revert`).
+- Nigdy nie nadpisuj historii (bez `push --force`, bez `rebase` opublikowanych commitów). Cofnięcie zmiany = nowy commit przywracający poprzednią wersję (`git revert`). Gałąź `main` ma regułę ochrony w GitHubie (od 6.11.2026): wymuszone nadpisanie i usunięcie gałęzi są zablokowane, także dla administratora.
 - Przed każdym pushem: sprawdź składnię `artykuly.js` (`node --check artykuly.js`), obecność wszystkich plików, na które wskazują artykuły, i wyświetlanie strony (Playwright: komputer, tablet, telefon – bez błędów w konsoli i bez brakujących plików).
 - Pliki większe niż 95 MB nie trafiają do repozytorium (limit GitHuba: 100 MB).
 - Komunikacja z właścicielem po polsku; zasady pisowni i stylu – w dokumentach projektu „Starożytna świątynia – aplikacja” (Standard inspiracji trenerskich).
